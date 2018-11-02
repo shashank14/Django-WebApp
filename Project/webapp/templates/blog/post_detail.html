@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{block.super}} | Settings Form
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+            <h1>{{obj.title}}</h1>
+            <p id='date'>
+            <b><i>
+              Published on {{obj.publish}} by {{obj.author|title}}
+            </i></b>
+         </p>
+        <p>{{obj.content|linebreaks}}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
